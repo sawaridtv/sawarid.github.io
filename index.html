@@ -27,92 +27,56 @@
         }
 
         body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden;
+            margin: 0; padding: 0;
+            background-color: var(--bg-color); color: var(--text-main);
+            font-family: 'Poppins', sans-serif; overflow-x: hidden;
             transition: all 0.3s ease;
         }
 
-        .lang-selector-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 100;
-        }
-
+        /* Language Selector */
+        .lang-selector-container { position: absolute; top: 20px; right: 20px; z-index: 100; }
         select {
-            background: var(--glass-bg);
-            color: var(--text-main);
-            border: 1px solid var(--glass-border);
-            padding: 8px 15px;
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            outline: none;
-            cursor: pointer;
+            background: var(--glass-bg); color: var(--text-main);
+            border: 1px solid var(--glass-border); padding: 8px 15px;
+            border-radius: 8px; font-family: 'Poppins', sans-serif; outline: none; cursor: pointer;
         }
-
         select option { background: var(--bg-color); color: var(--text-main); }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; text-align: center; }
 
         /* ========================================== */
         /* CSS: HEADER & BUTTONS                      */
         /* ========================================== */
         header { margin-top: 50px; }
-
         .app-logo {
-            width: 150px; height: 150px;
-            border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3);
-            margin-bottom: 20px;
+            width: 150px; height: 150px; border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(229, 9, 20, 0.3); margin-bottom: 20px;
         }
-
         .app-title {
             font-size: 3rem; font-weight: 800; margin: 0;
             background: linear-gradient(90deg, #FFFFFF, #E50914);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
-
         .tagline { font-size: 1.2rem; color: var(--text-muted); margin-top: 10px; margin-bottom: 30px; }
-
         .app-info {
-            display: inline-flex; gap: 20px;
-            background: var(--glass-bg); padding: 10px 30px;
-            border-radius: 50px; border: 1px solid var(--glass-border);
-            margin-bottom: 40px; font-weight: 600;
+            display: inline-flex; gap: 20px; background: var(--glass-bg); padding: 10px 30px;
+            border-radius: 50px; border: 1px solid var(--glass-border); margin-bottom: 40px; font-weight: 600;
         }
-
-        .button-group {
-            display: flex; flex-direction: column; align-items: center; gap: 15px;
-        }
-
+        
+        .button-group { display: flex; flex-direction: column; align-items: center; gap: 15px; }
         .download-btn {
-            background-color: var(--primary-color); color: white;
-            text-decoration: none; padding: 18px 50px;
-            font-size: 1.5rem; font-weight: bold; border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(229, 9, 20, 0.5);
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: pulse 2s infinite; cursor: pointer; border: none;
+            background-color: var(--primary-color); color: white; border: none;
+            padding: 18px 50px; font-size: 1.5rem; font-weight: bold; border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(229, 9, 20, 0.5); cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s; animation: pulse 2s infinite;
         }
-
         .download-btn:hover { transform: scale(1.05) translateY(-5px); box-shadow: 0 15px 35px rgba(229, 9, 20, 0.7); }
-
+        
         .web-tv-btn {
-            background-color: transparent; color: white;
-            text-decoration: none; padding: 15px 40px;
-            font-size: 1.2rem; font-weight: bold; border-radius: 50px;
+            background-color: transparent; color: white; text-decoration: none;
+            padding: 15px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 50px;
             border: 2px solid var(--primary-color); transition: all 0.3s;
         }
-
         .web-tv-btn:hover { background-color: var(--primary-color); transform: scale(1.02); }
 
         @keyframes pulse {
@@ -122,42 +86,44 @@
         }
 
         /* ========================================== */
-        /* CSS: STATS & DESCRIPTIONS                  */
+        /* CSS: STATS, CARDS & FEATURES GRID          */
         /* ========================================== */
-        .stats-container {
-            display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin: 60px 0;
-        }
-
+        .stats-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin: 60px 0; }
         .stat-box {
             background: var(--glass-bg); border: 1px solid var(--glass-border);
-            padding: 30px; border-radius: 15px; min-width: 200px;
-            backdrop-filter: blur(10px); transition: transform 0.3s;
+            padding: 30px; border-radius: 15px; min-width: 200px; backdrop-filter: blur(10px); transition: transform 0.3s;
         }
-
         .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--primary-color); margin: 0; }
         .stat-label { color: var(--text-muted); font-size: 1.1rem; margin-top: 5px; }
 
-        .description-grid {
-            display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 60px; text-align: left;
-        }
+        .section-title { font-size: 2.5rem; margin-bottom: 40px; margin-top: 80px; }
 
+        /* Description Cards (New) */
+        .description-grid { display: grid; grid-template-columns: 1fr; gap: 20px; margin-bottom: 60px; text-align: left; }
         html[dir="rtl"] .description-grid { text-align: right; }
-
         .desc-card {
             background: var(--secondary-bg); border-left: 5px solid var(--primary-color);
             padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
-        
         html[dir="rtl"] .desc-card { border-left: none; border-right: 5px solid var(--primary-color); }
-
         .desc-card h3 { margin: 0 0 10px 0; color: white; font-size: 1.5rem; }
         .desc-card p { margin: 0; color: var(--text-muted); line-height: 1.6; }
 
-        /* ========================================== */
-        /* CSS: SCREENSHOTS & ADSTERRA                */
-        /* ========================================== */
-        .section-title { font-size: 2.5rem; margin-bottom: 40px; margin-top: 60px; }
+        /* Features Grid (Old Grid) */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 60px; }
+        .feature-card {
+            background: var(--glass-bg); border: 1px solid var(--glass-border);
+            padding: 30px 20px; border-radius: 15px; text-align: left; transition: all 0.3s;
+        }
+        html[dir="rtl"] .feature-card { text-align: right; }
+        .feature-card:hover { background: rgba(229, 9, 20, 0.1); border-color: var(--primary-color); transform: scale(1.03); }
+        .feature-icon { font-size: 2.5rem; margin-bottom: 15px; }
+        .feature-card h3 { margin: 0 0 10px 0; font-size: 1.3rem; }
+        .feature-card p { margin: 0; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
 
+        /* ========================================== */
+        /* CSS: SCREENSHOTS, ADSTERRA & FOOTER        */
+        /* ========================================== */
         .gallery-container {
             display: flex; overflow-x: auto; gap: 20px; padding: 20px 0;
             scrollbar-width: thin; scrollbar-color: var(--primary-color) var(--bg-color);
@@ -166,7 +132,7 @@
 
         .ad-container {
             margin: 50px auto; padding: 10px; background: var(--glass-bg); border-radius: 10px;
-            max-width: 728px; min-height: 90px; display: flex; align-items: center; justify-content: center;
+            max-width: 728px; min-height: 90px; display: flex; align-items: center; justify-content: center; border: 1px dashed var(--glass-border);
         }
 
         footer { margin-top: 50px; padding: 40px 20px; background: #0a0a0a; border-top: 1px solid var(--glass-border); }
@@ -179,11 +145,13 @@
             .stat-box { min-width: 140px; padding: 20px; }
             .stat-number { font-size: 2rem; }
             .screenshot { height: 300px; }
+            .desc-card h3 { font-size: 1.3rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Language Switcher -->
     <div class="lang-selector-container">
         <select id="langSwitcher" onchange="changeLanguage(this.value)">
             <option value="en">English</option>
@@ -200,10 +168,10 @@
     </div>
 
     <div class="container">
+        
+        <!-- Header & Buttons -->
         <header>
-            <!-- 🔴 APP LOGO LINK HERE -->
             <img src="https://via.placeholder.com/150/1A1A1A/E50914?text=Sawarid+Logo" alt="Sawarid Logo" class="app-logo">
-            
             <h1 class="app-title">Sawarid سواريد</h1>
             <p class="tagline" data-i18n="tagline">The Ultimate Media Player for Mobile & TV</p>
             
@@ -212,15 +180,12 @@
             </div>
 
             <div class="button-group">
-                <!-- Download Button (Triggers Firebase Count & Download) -->
                 <button onclick="handleDownload()" class="download-btn" data-i18n="download_btn">DOWNLOAD APK NOW</button>
-                
-                <!-- 🔴 WEB TV LINK HERE -->
                 <a href="https://your-web-tv-link.com" target="_blank" class="web-tv-btn" data-i18n="web_tv_btn">🌐 Web TV (PC/Laptop)</a>
             </div>
         </header>
 
-        <!-- Live Analytics (Real Firebase Data) -->
+        <!-- Live Analytics -->
         <div class="stats-container">
             <div class="stat-box">
                 <h2 class="stat-number" id="count_total">0</h2>
@@ -236,7 +201,7 @@
             </div>
         </div>
 
-        <!-- Description Cards -->
+        <!-- NEW: Detailed Description Cards -->
         <h2 class="section-title" data-i18n="desc_title">Discover Sawarid Features</h2>
         <div class="description-grid">
             <div class="desc-card">
@@ -261,24 +226,55 @@
             </div>
         </div>
 
+        <!-- OLD: Icon Features Grid -->
+        <h2 class="section-title" data-i18n="features_title">Why Choose Sawarid?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📺</div>
+                <h3 data-i18n="feat1_title">Universal Player</h3>
+                <p data-i18n="feat1_desc">Play M3U, M3U8, MP4, MKV smoothly. Best choice for live streaming and local videos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📻</div>
+                <h3 data-i18n="feat2_title">Live Radio & Background</h3>
+                <p data-i18n="feat2_desc">Listen to worldwide radio stations in the background with lock screen controls.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎛️</div>
+                <h3 data-i18n="feat3_title">Advanced Audio Engine</h3>
+                <p data-i18n="feat3_desc">Built-in Equalizer, Bass Boost, and Volume Enhancer up to 500%.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🖥️</div>
+                <h3 data-i18n="feat4_title">TV & Mobile Ready</h3>
+                <p data-i18n="feat4_desc">Fully optimized layout for Android Smartphones and Smart TVs with D-Pad support.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3 data-i18n="feat5_title">Ultimate Security</h3>
+                <p data-i18n="feat5_desc">Anti-piracy and anti-sniffing engine ensures a safe and secure environment.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3 data-i18n="feat6_title">Picture-in-Picture (PiP)</h3>
+                <p data-i18n="feat6_desc">Multitask effortlessly by watching your favorite videos in a floating window.</p>
+            </div>
+        </div>
+
         <!-- Screenshots -->
         <h2 class="section-title" data-i18n="screens_title">App Overview</h2>
         <div class="gallery-container">
-            <!-- 🔴 SCREENSHOT LINKS HERE -->
             <img src="https://via.placeholder.com/225x400/222/FFF?text=Screen+1" alt="Screen 1" class="screenshot">
             <img src="https://via.placeholder.com/225x400/222/FFF?text=Screen+2" alt="Screen 2" class="screenshot">
             <img src="https://via.placeholder.com/225x400/222/FFF?text=Screen+3" alt="Screen 3" class="screenshot">
+            <img src="https://via.placeholder.com/225x400/222/FFF?text=Screen+4" alt="Screen 4" class="screenshot">
+            <img src="https://via.placeholder.com/225x400/222/FFF?text=Screen+5" alt="Screen 5" class="screenshot">
         </div>
 
-        <!-- ========================================== -->
-        <!-- 🔴 ADSTERRA BANNER AD PLACEHOLDER        -->
-        <!-- ========================================== -->
+        <!-- ADSTERRA BANNER ADS -->
         <div class="ad-container">
-            <!-- PASTE YOUR ADSTERRA BANNER HTML/JS SCRIPT BELOW THIS LINE -->
-            <p style="color: gray; font-size: 12px;">Adsterra Banner Ad Space (728x90)</p>
-            
-            
-            <!-- PASTE YOUR ADSTERRA SCRIPT ABOVE THIS LINE -->
+            <!-- PASTE YOUR ADSTERRA SCRIPT TAGS HERE -->
+            <p style="color: gray; font-size: 12px; margin: 0;">Adsterra Banner Ad Space (728x90)</p>
         </div>
 
     </div>
@@ -301,7 +297,7 @@
         const firebaseConfig = {
             apiKey: "YOUR_API_KEY",
             authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-            databaseURL: "YOUR_DATABASE_URL", // e.g., https://sawarid-xxxx.firebaseio.com
+            databaseURL: "YOUR_DATABASE_URL", 
             projectId: "YOUR_PROJECT_ID",
             storageBucket: "YOUR_PROJECT_ID.appspot.com",
             messagingSenderId: "YOUR_SENDER_ID",
@@ -309,16 +305,15 @@
         };
         
         // 🔴🔴 YOUR DIRECT APK DOWNLOAD LINK 🔴🔴
-        const APK_LINK = "https://your-server.com/sawarid.apk";
+        const APK_LINK = "https://raw.githubusercontent.com/sawaridtv/APK/main/sawarid.apk";
 
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
 
-        // Dates for Monthly and Today
         const dateObj = new Date();
-        const todayStr = dateObj.toISOString().split('T')[0]; // YYYY-MM-DD
-        const monthStr = todayStr.substring(0, 7); // YYYY-MM
+        const todayStr = dateObj.toISOString().split('T')[0]; 
+        const monthStr = todayStr.substring(0, 7); 
 
         // Fetch Real-time Download Counts
         db.ref('web_downloads/total').on('value', snap => {
@@ -338,7 +333,7 @@
             db.ref('web_downloads/monthly/' + monthStr).set(firebase.database.ServerValue.increment(1));
             db.ref('web_downloads/today/' + todayStr).set(firebase.database.ServerValue.increment(1));
             
-            // Redirect to download link
+            // 🔴 Redirect to direct download link
             window.location.href = APK_LINK;
         }
 
@@ -356,6 +351,13 @@
                 "card3_title": "📁 Local Video Player", "card3_desc": "Not just online streams, Sawarid acts as a powerful local media player. Play videos stored on your device seamlessly with advanced audio controls.",
                 "card4_title": "🖥️ Cross-Device Compatibility", "card4_desc": "Designed perfectly for all Android devices. Whether it's your Smartphone, Smart TV, Android TV Box, or Projector. Easily navigate using your TV Remote (D-Pad).",
                 "card5_title": "💻 Web TV for PC & Laptop", "card5_desc": "Don't have an Android device? No problem! Access our Web TV directly from your PC or Laptop browser and watch live channels for free.",
+                "features_title": "Why Choose Sawarid?",
+                "feat1_title": "Universal Player", "feat1_desc": "Play M3U, M3U8, MP4, MKV smoothly. Best choice for live streaming and local videos.",
+                "feat2_title": "Live Radio & Background", "feat2_desc": "Listen to worldwide radio stations in the background with lock screen controls.",
+                "feat3_title": "Advanced Audio Engine", "feat3_desc": "Built-in Equalizer, Bass Boost, and Volume Enhancer up to 500%.",
+                "feat4_title": "TV & Mobile Ready", "feat4_desc": "Fully optimized layout for Android Smartphones and Smart TVs with D-Pad support.",
+                "feat5_title": "Ultimate Security", "feat5_desc": "Anti-piracy and anti-sniffing engine ensures a safe and secure environment.",
+                "feat6_title": "Picture-in-Picture (PiP)", "feat6_desc": "Multitask effortlessly by watching your favorite videos in a floating window.",
                 "screens_title": "App Overview", "foot_privacy": "Privacy Policy", "foot_disclaimer": "Disclaimer", "foot_contact": "Contact Us", "foot_copy": "© 2026 Sawarid TV. All Rights Reserved."
             },
             "bn": {
@@ -367,7 +369,14 @@
                 "card2_title": "🔗 কাস্টম প্লেলিস্ট ও সোর্স", "card2_desc": "আপনার নিজস্ব M3U প্লেলিস্ট বা স্ট্রিমিং লিংক আছে? খুব সহজেই কাস্টম সোর্স যুক্ত করুন এবং কোনো বাধা ছাড়াই প্রিয় কন্টেন্ট উপভোগ করুন।",
                 "card3_title": "📁 লোকাল ভিডিও প্লেয়ার", "card3_desc": "শুধু অনলাইন স্ট্রিমিং নয়, সাওয়ারিদ একটি শক্তিশালী লোকাল ভিডিও প্লেয়ারও। অ্যাডভান্সড অডিও কন্ট্রোলের সাথে ডিভাইসের ভিডিওগুলো অনায়াসে চালান।",
                 "card4_title": "🖥️ সকল ডিভাইসে সাপোর্ট", "card4_desc": "স্মার্টফোন, স্মার্ট টিভি, টিভি বক্স বা প্রজেক্টর— সব অ্যান্ড্রয়েড ডিভাইসের জন্য পারফেক্ট ডিজাইন। রিমোট (D-Pad) দিয়ে খুব সহজেই নেভিগেট করা যায়।",
-                "card5_title": "💻 পিসি ও ল্যাপটপের জন্য ওয়েব টিভি", "card5_desc": "আপনার অ্যান্ড্রয়েড ডিভাইস নেই? কোনো সমস্যা নেই! সরাসরি পিসি বা ল্যাপটপের ব্রাউজার থেকে আমাদের ওয়েব টিভিতে প্রবেশ করুন এবং ফ্রিতে লাইভ চ্যানেল দেখুন।"
+                "card5_title": "💻 পিসি ও ল্যাপটপের জন্য ওয়েব টিভি", "card5_desc": "আপনার অ্যান্ড্রয়েড ডিভাইস নেই? কোনো সমস্যা নেই! সরাসরি পিসি বা ল্যাপটপের ব্রাউজার থেকে আমাদের ওয়েব টিভিতে প্রবেশ করুন এবং ফ্রিতে লাইভ চ্যানেল দেখুন।",
+                "features_title": "সাওয়ারিদ কেন সেরা?",
+                "feat1_title": "ইউনিভার্সাল প্লেয়ার", "feat1_desc": "M3U, M3U8, MP4, MKV অনায়াসে চালান। লাইভ স্ট্রিমিং এর জন্য সেরা।",
+                "feat2_title": "লাইভ রেডিও এবং ব্যাকগ্রাউন্ড", "feat2_desc": "স্ক্রিন অফ রেখেও ব্যাকগ্রাউন্ডে সারাবিশ্বের রেডিও শুনুন।",
+                "feat3_title": "অ্যাডভান্সড অডিও", "feat3_desc": "ইকুয়ালাইজার, বেস বুস্ট এবং ভলিউম ৫০০% পর্যন্ত বাড়ানোর সুবিধা।",
+                "feat4_title": "টিভি এবং মোবাইল রেডি", "feat4_desc": "স্মার্টফোন এবং স্মার্ট টিভির রিমোট কন্ট্রোলের জন্য চমৎকার ডিজাইন।",
+                "feat5_title": "শক্তিশালী সিকিউরিটি", "feat5_desc": "অ্যান্টি-হ্যাকিং সিস্টেম আপনার অ্যাপের নিরাপত্তা নিশ্চিত করে।",
+                "feat6_title": "পিকচার-ইন-পিকচার (PiP)", "feat6_desc": "ফ্লোটিং স্ক্রিনে ভিডিও দেখার পাশাপাশি অন্য কাজ করুন অনায়াসে।"
             },
             "ar": {
                 "tagline": "أفضل مشغل وسائط للموبايل والتلفزيون", "version": "الإصدار: 1.0.0", "size": "الحجم: 5.90 ميغابايت",
@@ -378,15 +387,16 @@
                 "card2_title": "🔗 قوائم ومصادر مخصصة", "card2_desc": "هل لديك قائمة M3U الخاصة بك؟ أضف مصادرك المخصصة بسهولة واستمتع بمحتواك المفضل.",
                 "card3_title": "📁 مشغل فيديو محلي", "card3_desc": "ليس فقط للبث عبر الإنترنت، يعمل سواريد كمشغل وسائط قوي لتشغيل فيديوهات هاتفك.",
                 "card4_title": "🖥️ متوافق مع جميع الأجهزة", "card4_desc": "مصمم بشكل مثالي للهواتف الذكية وأجهزة التلفزيون الذكية والبروجيكتور. يدعم جهاز التحكم عن بعد.",
-                "card5_title": "💻 تلفزيون الويب للكمبيوتر", "card5_desc": "يمكنك الوصول إلى تلفزيون الويب الخاص بنا مباشرة من متصفح الكمبيوتر ومشاهدة القنوات مجانًا."
-            },
-            "pt": { "tagline": "O Melhor Reprodutor de Mídia", "download_btn": "BAIXAR APK", "web_tv_btn": "🌐 Web TV (PC)", "desc_title": "Recursos do Sawarid" },
-            "id": { "tagline": "Pemutar Media Terbaik", "download_btn": "UNDUH APK", "web_tv_btn": "🌐 Web TV (PC)", "desc_title": "Fitur Sawarid" },
-            "zh": { "tagline": "终极媒体播放器", "download_btn": "下载 APK", "web_tv_btn": "🌐 Web TV (PC)", "desc_title": "Sawarid 功能" },
-            "ja": { "tagline": "究極のメディアプレーヤー", "download_btn": "APKをダウンロード", "web_tv_btn": "🌐 Web TV (PC)", "desc_title": "Sawarid の特徴" },
-            "hi": { "tagline": "सर्वश्रेष्ठ मीडिया प्लेयर", "download_btn": "एपीके डाउनलोड करें", "web_tv_btn": "🌐 वेब टीवी (पीसी)", "desc_title": "सवारिद की विशेषताएं" },
-            "ta": { "tagline": "சிறந்த மீடியா பிளேயர்", "download_btn": "APK பதிவிறக்க", "web_tv_btn": "🌐 வெப் டிவி", "desc_title": "அம்சங்கள்" },
-            "ne": { "tagline": "उत्तम मिडिया प्लेयर", "download_btn": "APK डाउनलोड", "web_tv_btn": "🌐 वेब टिभी (PC)", "desc_title": "विशेषताहरु" }
+                "card5_title": "💻 تلفزيون الويب للكمبيوتر", "card5_desc": "يمكنك الوصول إلى تلفزيون الويب الخاص بنا مباشرة من متصفح الكمبيوتر ومشاهدة القنوات مجانًا.",
+                "features_title": "لماذا تختار سواريد؟",
+                "feat1_title": "مشغل شامل", "feat1_desc": "تشغيل M3U, M3U8, MP4, MKV بسلاسة تامة.",
+                "feat2_title": "راديو مباشر وخلفية", "feat2_desc": "استمع إلى محطات الراديو العالمية في الخلفية مع قفل الشاشة.",
+                "feat3_title": "محرك صوت متقدم", "feat3_desc": "معادل صوت ومضخم يصل إلى 500٪.",
+                "feat4_title": "جاهز للتلفزيون والموبايل", "feat4_desc": "تصميم محسن بالكامل للهواتف وأجهزة التلفزيون الذكية.",
+                "feat5_title": "أمان فائق", "feat5_desc": "محرك حماية يضمن بيئة آمنة تماماً.",
+                "feat6_title": "صورة داخل صورة (PiP)", "feat6_desc": "شاهد مقاطع الفيديو في نافذة عائمة أثناء قيامك بمهام أخرى."
+            }
+            // Add other languages here following the same keys.
         };
 
         function changeLanguage(langCode) {
